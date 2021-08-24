@@ -184,13 +184,13 @@ class Main extends PluginBase implements Listener{
 	    $this->mine->setListener([$this, "openMineShop2"]);
         $this->mine->setName("MineShop");
 	    $inventory = $this->mine->getInventory();
-	    $inventory->setItem(0, Item::get(266, 0, 1)->setLore(["\n§l§bBUY 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
-	    $inventory->setItem(1, Item::get(265, 0, 1)->setLore(["\n§l§bBUY 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
-	    $inventory->setItem(2, Item::get(388, 0, 1)->setLore(["\n§l§bSELL 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
-	    $inventory->setItem(3, Item::get(264, 0, 1)->setLore(["\n§l§bBUY 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
-	    $inventory->setItem(4, Item::get(351, 4, 1)->setLore(["\n§l§bBUY 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
-	    $inventory->setItem(5, Item::get(406, 0, 1)->setLore(["\n§l§bBUY 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
-	    $inventory->setItem(6, Item::get(331, 0, 1)->setLore(["\n§l§bBUY 1: §a$5000.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(0, Item::get(266, 0, 1)->setLore(["\n§l§bBUY 1: §a$150.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(1, Item::get(265, 0, 1)->setLore(["\n§l§bBUY 1: §a$100.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(2, Item::get(388, 0, 1)->setLore(["\n§l§bSELL 1: §a$500.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(3, Item::get(264, 0, 1)->setLore(["\n§l§bBUY 1: §a$400.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(4, Item::get(351, 4, 1)->setLore(["\n§l§bBUY 1: §a$100.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(5, Item::get(406, 0, 1)->setLore(["\n§l§bBUY 1: §a$100.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
+	    $inventory->setItem(6, Item::get(331, 0, 1)->setLore(["\n§l§bBUY 1: §a$100.0 §r§o(Left-Click)\n§l§bBUY 64: §a320000.0 §r§o(Left-Click)"]));
 	    $inventory->setItem(18, Item::get(160, 1, 1)->setCustomName("---"));
         $inventory->setItem(19, Item::get(160, 1, 1)->setCustomName("---"));
         $inventory->setItem(20, Item::get(160, 1, 1)->setCustomName("---"));
@@ -215,7 +215,7 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "150"); 
 			    $inv = $sender->getInventory();
 		        $inv->addItem(Item::get(266, 0, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
@@ -228,7 +228,7 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "100"); 
 			    $inv = $sender->getInventory();
 		        $inv->addItem(Item::get(265, 0, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
@@ -241,7 +241,7 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "500"); 
 			    $inv = $sender->getInventory();
 		        $inv->addItem(Item::get(388, 0, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
@@ -254,7 +254,7 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "400"); 
 			    $inv = $sender->getInventory();
 		        $inv->addItem(Item::get(264, 0, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
@@ -267,9 +267,9 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "100"); 
 			    $inv = $sender->getInventory();
-		        $inv->addItem(Item::get(351, 0, 1));
+		        $inv->addItem(Item::get(351, 4, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
 		    }else{
 			    $sender->sendMessage("§c§oYou don't have money to buy this item!");
@@ -280,7 +280,7 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "100"); 
 			    $inv = $sender->getInventory();
 		        $inv->addItem(Item::get(406, 0, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
@@ -293,7 +293,7 @@ class Main extends PluginBase implements Listener{
 	        $sender->getLevel()->addSound(new SoundSuccess($sender->x, $sender->y, $sender->z), [$sender]);
 	        $money = $this->eco->myMoney($sender);
 	        if($money >= 5000){
-			    $this->eco->reduceMoney($sender, "5000"); 
+			    $this->eco->reduceMoney($sender, "100"); 
 			    $inv = $sender->getInventory();
 		        $inv->addItem(Item::get(331, 0, 1));
 		        $sender->sendMessage("§aYou bought 1 item(s).");
