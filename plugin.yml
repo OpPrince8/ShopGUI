@@ -4,6 +4,6 @@ api: 3.0.0, 3.22.2
 version: 1.0
 author: Prince
 
-commands: shop
+commands:
   buy:
     description: ""
